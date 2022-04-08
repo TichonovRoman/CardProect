@@ -1,0 +1,14 @@
+.App {
+    display: grid;
+    grid-template-areas:
+    "a a"
+    "b b"
+    ;
+}
+.a {
+    grid-area: a;
+}
+.b {
+    grid-area: b;
+}
+
