@@ -12,7 +12,7 @@ const NotFoundPage = () => {
                     стрaница не найдена
                 </div>
 
-                <NavLink to={"/main"} >Вернуться на главную</NavLink>
+                <NavLink to={"/CardProject"} >Вернуться на главную</NavLink>
             </div>
 
 
