@@ -2,27 +2,29 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import s from "./NavBar.module.css"
 
+const finalClass = (isActive: { isActive: boolean }) => isActive.isActive ? `${s.item} ${s.activeLink}` : `${s.item}`
+
 const NavBar = () => {
 
 
     return (
         <nav className={s.nav}>
             <NavLink to="/CardProject/profile"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>Profile</NavLink>
+                     className={(isActive) => finalClass(isActive)}>Profile</NavLink>
             <NavLink to="/CardProject/login"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>Login</NavLink>
+                     className={(isActive) => finalClass(isActive)}>Login</NavLink>
             <NavLink to="/CardProject/newPasswordEnter"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>New Password
+                     className={(isActive) => finalClass(isActive)}>New Password
                 Enter</NavLink>
             <NavLink to="/CardProject/404"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>404</NavLink>
+                     className={(isActive) => finalClass(isActive)}>404</NavLink>
             <NavLink to="/CardProject/passwordRecovery"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>Password
+                     className={(isActive) => finalClass(isActive)}>Password
                 Recovery</NavLink>
             <NavLink to="/CardProject/registration"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>Registration</NavLink>
+                     className={(isActive) => finalClass(isActive)}>Registration</NavLink>
             <NavLink to="/CardProject/testPage"
-                     className={({isActive}) => isActive ? `${s.item} ${s.activeLink}` : `${s.item}`}>Test
+                     className={(isActive) => finalClass(isActive)}>Test
                 page</NavLink>
 
         </nav>

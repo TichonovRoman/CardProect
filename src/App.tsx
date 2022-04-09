@@ -23,6 +23,7 @@ const App = () => {
             <div className={`${s.b} ${g.backgroundPage}`}>
                 <Routes>
                     <Route path={"/CardProject"} element={<Main/>}/>
+                    <Route path={"/"} element={<Main/>}/>
                     {/*это для работы на github pages*/}
 
                     {/*<Route path={"/"} element={<Main/>}/>*/}
