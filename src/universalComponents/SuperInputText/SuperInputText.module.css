@@ -21,12 +21,13 @@
 }
 
 .defaultInput {
-    font-weight: bold;
-    background-color: #666666;
-    border: solid 1px black;
-    width: 300px;
-    margin-left: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 7px #666;
-    padding-left: 10px;
+    background: #ECECF9;
+    opacity: 0.5;
+    border: 1px solid #635D80;
+    box-sizing: border-box;
+    border-radius: 2px;
+    border: 1px #635D80 solid;
+    height: 36px;
+    width: 461px;
+    opacity: 50%;
 }

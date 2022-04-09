@@ -23,7 +23,7 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     return (
 
             <input
-                type={'checkbox'}
+                type={'radio'}
                 className={finalInputClassName}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (checked например там внутри)
             />

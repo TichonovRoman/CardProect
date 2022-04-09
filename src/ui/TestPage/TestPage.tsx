@@ -12,7 +12,7 @@ const TestPage = () => {
 
 <div style={{display: "flex", flexDirection: "column"}}>
     <SuperInputText/>
-    <SuperButton title={"Тестовая кнопка"} />
+    <SuperButton title={"Test button"} />
     <SuperCheckbox/>
 </div>
 
