@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.module.css';
-import NavBar from "./ui/NavBar/NavBar";
+import NavBar from "./ui/components/NavBar/NavBar";
 import s from "./App.module.css"
 import {Route, Routes} from "react-router-dom";
-import Profile from "./ui/Profile/Profile";
-import Login from "./ui/Login/Login";
-import NewPasswordEnter from "./ui/NewPasswordEnter/NewPasswordEnter";
-import NotFoundPage from "./ui/NotFoundPage/NotFoundPage";
-import PasswordRecovery from "./ui/PasswordRecovery/PasswordRecovery";
-import Registration from "./ui/Registration/Registration";
-import TestPage from "./ui/TestPage/TestPage";
+import Profile from "./ui/components/Profile/Profile";
+import Login from "./ui/components/Login/Login";
+import NewPasswordEnter from "./ui/components/NewPasswordEnter/NewPasswordEnter";
+import NotFoundPage from "./ui/components/NotFoundPage/NotFoundPage";
+import PasswordRecovery from "./ui/components/PasswordRecovery/PasswordRecovery";
+import Registration from "./ui/components/Registration/Registration";
+import TestPage from "./ui/components/TestPage/TestPage";
 
 const App = () => {
   return (
