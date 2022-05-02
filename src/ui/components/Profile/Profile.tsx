@@ -3,7 +3,7 @@ import s from "../../generalStyle/GeneralStyle.module.css"
 import m from "./Profile.module.css"
 import personalPhoto from "../../img/ProfileFhoto.jpg"
 import photoaparate from "../../img/Photoaparat.png"
-import {FormControl, FormHelperText, Input, InputLabel} from "@mui/material";
+import {Button, FormControl, FormHelperText, Input, InputLabel} from "@mui/material";
 
 
 const Profile = () => {
@@ -57,31 +57,28 @@ const Profile = () => {
                                 {/*<span className={m.rowName}>Nickname: </span>*/}
                                 <FormControl disabled variant="standard">
                                     <InputLabel className={m.rowName} htmlFor="component-disabled">Nickname</InputLabel>
-                                    <Input id="component-disabled" className={m.inputValue} value={name} onDoubleClick={() => setChangeOn(true)}/>
+                                    <Input id="component-disabled" className={m.inputValue} value={name}
+                                           onDoubleClick={() => setChangeOn(true)}/>
                                     <FormHelperText>(double click to change)</FormHelperText>
                                 </FormControl>
                             </div>
                         }
-                        {/*{!changeOn ? <div>(double click to change)</div> : <div> </div>}*/}
+
 
                     </div>
 
                     <div style={{display: "flex"}}>
                         <FormControl disabled variant="standard">
                             <InputLabel className={m.rowName} htmlFor="component-disabled">Number of cards:</InputLabel>
-                            <Input id="component-disabled" value={cardsValue} />
+                            <Input id="component-disabled" value={cardsValue}/>
                         </FormControl>
-
-
-                        {/*<span className={m.rowName}>Number of cards:   </span>*/}
-                        {/*<span className={m.personalText}>{cardsValue}</span>*/}
                     </div>
 
                 </div>
                 <div className={m.buttonContainer}>
-                    <button className={m.logoutButton}>Logout</button>
+                    <Button variant="outlined" className={m.button}>Logout</Button>
 
-                    <button className={m.saveButton}>Save</button>
+                    <Button variant="contained" className={m.button}>Save</Button>
                     {/*санка меняющая имя (запрос post на сервер, потом диспатч в стейт)*/}
                 </div>
             </div>
