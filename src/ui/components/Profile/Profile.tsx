@@ -3,9 +3,12 @@ import s from "../../generalStyle/GeneralStyle.module.css"
 import m from "./Profile.module.css"
 import personalPhoto from "../../img/ProfileFhoto.jpg"
 import photoaparate from "../../img/Photoaparat.png"
+import {FormControl, FormHelperText, Input, InputLabel} from "@mui/material";
 
 
 const Profile = () => {
+
+    //запрос на auth/me, в противном случае редирект на логин
 
     let [changeOn, setChangeOn] = useState(false)
 
@@ -32,30 +35,46 @@ const Profile = () => {
                         <div className={m.photoButtonBox}>
                             <img className={m.downloadPhotoButton}/>
                             <img className={m.photoaparate} src={photoaparate}/>
-
                         </div>
-
-
                     </div>
                 </div>
                 <div className={m.inputContainer}>
                     <div className={m.nameBox}>
-                        <span className={m.rowName}>Nickname: </span>
+
                         {changeOn
-                            ?
-                            <input onBlur={saveNameHandler} onChange={changeNameHandler} autoFocus value={name}
-                                   className={m.personalText}/>
-                            :
-                            <span className={m.personalText} onDoubleClick={() => setChangeOn(true)}>{name}</span>}
+
+                            ? <div style={{display: "flex", flexDirection: "column"}}>
+                                {/*<span className={m.rowName}>Nickname: </span>*/}
+                                <FormControl variant="standard">
+                                    <InputLabel className={m.rowName} htmlFor="component-simple">Nickname</InputLabel>
+                                    <Input id="component-simple" onBlur={saveNameHandler} onChange={changeNameHandler}
+                                           autoFocus={true} value={name}/>
+                                </FormControl>
+                            </div>
 
 
-
+                            : <div style={{display: "flex", flexDirection: "column"}}>
+                                {/*<span className={m.rowName}>Nickname: </span>*/}
+                                <FormControl disabled variant="standard">
+                                    <InputLabel className={m.rowName} htmlFor="component-disabled">Nickname</InputLabel>
+                                    <Input id="component-disabled" className={m.inputValue} value={name} onDoubleClick={() => setChangeOn(true)}/>
+                                    <FormHelperText>(double click to change)</FormHelperText>
+                                </FormControl>
+                            </div>
+                        }
+                        {/*{!changeOn ? <div>(double click to change)</div> : <div> </div>}*/}
 
                     </div>
-                    <div style={{fontSize: "12px", marginLeft: "40px"}}>(double click to change)</div>
+
                     <div style={{display: "flex"}}>
-                        <span className={m.rowName}>Number of cards:   </span>
-                        <span className={m.personalText}>{cardsValue}</span>
+                        <FormControl disabled variant="standard">
+                            <InputLabel className={m.rowName} htmlFor="component-disabled">Number of cards:</InputLabel>
+                            <Input id="component-disabled" value={cardsValue} />
+                        </FormControl>
+
+
+                        {/*<span className={m.rowName}>Number of cards:   </span>*/}
+                        {/*<span className={m.personalText}>{cardsValue}</span>*/}
                     </div>
 
                 </div>
@@ -64,12 +83,8 @@ const Profile = () => {
 
                     <button className={m.saveButton}>Save</button>
                     {/*санка меняющая имя (запрос post на сервер, потом диспатч в стейт)*/}
-
-
                 </div>
-
             </div>
-
         </div>
     );
 };
