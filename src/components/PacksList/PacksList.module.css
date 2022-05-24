@@ -1,0 +1,76 @@
+.packsPage {
+    position: relative;
+    display: flex;
+    width: 1008px;
+    min-height: 636px;
+    left: 136px;
+    top: 84px;
+    background: #F9F9FE;
+    border-radius: 8px;
+}
+
+.cardsSettings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*border: 1px solid black;*/
+    padding-top: 33px;
+    width: 243px;
+    background: #ECECF9;
+}
+
+.packsList {
+    /*border: 1px solid black;*/
+    width: 765px;
+}
+
+.packsTable {
+    /*border: 1px solid black;*/
+    margin-right: 76px;
+    min-height: 430px;
+    margin-left: 20px;
+}
+.tableTitle {
+    display: flex;
+    /*justify-content: space-between;*/
+     width: 669px;
+     height: 48px;
+     /*left: 427px;*/
+     /*top: 216px;*/
+     background: #ECECF9;
+ }
+.columnNames {
+    width: 135px;
+    display: flex;
+    align-items: center;
+ /*border: 1px solid;*/
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 16px;
+    color: #000000;
+}
+
+
+
+.propertySelect {
+    /*border: 1px solid black;*/
+    height: 150px;
+    width: 200px;
+}
+
+.propertySelectTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2D2E46;
+}
+
+.propertySelectGroup {
+    /*border: 1px solid black;*/
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

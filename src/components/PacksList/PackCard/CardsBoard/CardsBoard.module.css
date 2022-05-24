@@ -1,0 +1,86 @@
+.cardsRow {
+    display: flex;
+    align-items: flex-end;
+    width: 950px;
+    height: fit-content;
+    /*left: 427px;*/
+    /*top: 216px;*/
+    background: #ECECF9;
+}
+.cardsRowStyle {
+    background: #FFFFFF;
+}
+.columnQuestion {
+    width: 150px;
+    height: fit-content;
+    display: flex;
+
+    /*border: 1px solid;*/
+    font-style: normal;
+    /*font-weight: normal;*/
+    /*font-size: 15px;*/
+    line-height: 16px;
+    color: #000000;
+    /*margin-left: 20px;*/
+    /*position: absolute;*/
+    /*align-items: center;*/
+    /*width: 182px;*/
+    /*height: 16px;*/
+    /*left: 50px;*/
+    /*top: 220px;*/
+    font-family: 'SF UI Display';
+    /*font-style: normal;*/
+    font-weight: 600;
+    font-size: 18px;
+    /*line-height: 16px;*/
+}
+.columnAnswer {
+    width: 160px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid;*/
+    font-style: normal;
+    /*font-weight: normal;*/
+    /*font-size: 15px;*/
+    /*line-height: 16px;*/
+    /*padding-top: 15px;*/
+    color: #000000;
+    margin-left: 300px;
+    position: inherit;
+    /*width: 213px;*/
+    /*left: 514.48px;*/
+    /*top: 280px;*/
+
+    font-family: 'SF UI Display';
+    /*font-style: normal;*/
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+}
+.columnUpdate {
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    color: #000000;
+    margin-left: 210px;
+
+}
+.columnGrade {
+    width: 150px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /*border: 1px solid;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    color: #000000;
+}
