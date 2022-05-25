@@ -3,7 +3,7 @@ import m from "./TableTitle.module.css";
 import {filterTableAC, filterTableValue} from "../packs-reducer";
 import {useDispatch} from "react-redux";
 
-const TableTitle = () => {
+const TableTitle = React.memo (() => {
 
     const dispatch = useDispatch()
 
@@ -12,41 +12,32 @@ const TableTitle = () => {
     const [updatedSort, setUpdatedSort] = useState<filterTableValue>("0updated")
     const [createdSort, setCreatedSort] = useState<filterTableValue>("0created")
 
+
+    const sortFunction = (oneValue: string, twoValue: string, stateValue: filterTableValue, setFunction: any) => {
+         if (stateValue === oneValue) {
+            setFunction(twoValue)
+            dispatch(filterTableAC(stateValue))
+        } else {
+            setFunction(oneValue)
+            dispatch(filterTableAC(stateValue))
+        }
+    }
+
     const editNameSortHandler = () => {
-        if (nameSort === "0name") {
-            setNameSort("1name")
-            dispatch(filterTableAC(nameSort))
-        } else {
-            setNameSort("0name")
-            dispatch(filterTableAC(nameSort))
-        }
+        return sortFunction("0name", "1name", nameSort, setNameSort)
     }
+
     const editCardsSortHandler = () => {
-        if (cardsSort === "0cardsCount") {
-            setCardsSort("1cardsCount")
-            dispatch(filterTableAC(cardsSort))
-        } else {
-            setCardsSort("0cardsCount")
-            dispatch(filterTableAC(cardsSort))
-        }
+        return sortFunction("0cardsCount", "1cardsCount", cardsSort, setCardsSort)
     }
+
     const editUpdatedSortHandler = () => {
-        if (updatedSort === "0updated") {
-            setUpdatedSort("1updated")
-            dispatch(filterTableAC(updatedSort))
-        } else {
-            setUpdatedSort("0updated")
-            dispatch(filterTableAC(updatedSort))
-        }
+        return sortFunction("0updated", "1updated", updatedSort, setUpdatedSort)
     }
+
     const editCreatedSortHandler = () => {
-        if (createdSort === "0created") {
-            setCreatedSort("1created")
-            dispatch(filterTableAC(createdSort))
-        } else {
-            setCreatedSort("0created")
-            dispatch(filterTableAC(createdSort))
-        }
+
+        return sortFunction("0created", "1created", createdSort, setCreatedSort)
     }
 
     return (
@@ -78,6 +69,6 @@ const TableTitle = () => {
             <div className={m.columnNames} style={{justifyContent: "center"}}>Actions</div>
         </div>
     );
-};
+});
 
 export default TableTitle;

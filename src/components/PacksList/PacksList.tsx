@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import s from "../../generalStyle/GeneralStyle.module.css"
 import m from "./PacksList.module.css"
 import {useDispatch, useSelector} from "react-redux";
@@ -12,8 +12,7 @@ import {cardPackType, getPacksTC, GetParamsType} from "./packs-reducer";
 import {Navigate} from "react-router-dom";
 import Pagination from "./Pagination/Pagination";
 import {CircularProgress, Grid, Paper} from "@mui/material";
-import {authAPI, cardsAPI} from "../api/cards-api";
-import {setUserAC} from "../Login/login-reducer";
+import {authAPI} from "../api/cards-api";
 import {loggedAC} from "../Bll/auth-reducer";
 
 
@@ -28,7 +27,6 @@ const PacksList = () => {
         user_id,
         packName,
         pageCount,
-        ...rest
     } = useSelector<AppRootReducerType, GetParamsType>((state) => state.packs.getParams)
 
     const dispatch: any = useDispatch()
@@ -52,6 +50,7 @@ const PacksList = () => {
     if (!isLogged) {
         return <Navigate to={`/login`}/>
     }
+
 
     return (
         <Grid container justifyContent={'center'}>
@@ -87,17 +86,24 @@ const PacksList = () => {
                                 <Paper elevation={6}>
                                     <TableTitle/>
                                     {
-                                        packs.map((p, index) => {
+                                        packs.map(({name,
+                                                       cardsCount,
+                                                       updated,
+                                                       created,
+                                                       _id,
+                                                       user_id},
+                                                   index) => {
+                                            //деструктуризацией достаем данные из элемента
                                             const {v4: uuidv4} = require('uuid');
                                             return (
                                                 <TableRow
                                                     key={uuidv4()}
-                                                    name={p.name}
-                                                    cards={p.cardsCount}
-                                                    updated={p.updated}
-                                                    created={p.created}
-                                                    id={p._id}
-                                                    userId={p.user_id}
+                                                    name={name}
+                                                    cards={cardsCount}
+                                                    updated={updated}
+                                                    created={created}
+                                                    id={_id}
+                                                    userId={user_id}
                                                     index={index}
                                                 />
                                             )

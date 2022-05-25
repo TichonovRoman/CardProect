@@ -23,6 +23,7 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom:0;
+    cursor: pointer;
 }
 .upTriangle {
     width:0;
@@ -31,4 +32,5 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top:0;
+    cursor: pointer;
 }
