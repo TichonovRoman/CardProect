@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CardProject/static/css/main.f2e8db5b.css",
-    "main.js": "/CardProject/static/js/main.b72c2693.js",
+    "main.js": "/CardProject/static/js/main.64bca7ef.js",
     "static/css/44.705e7ae3.chunk.css": "/CardProject/static/css/44.705e7ae3.chunk.css",
     "static/js/44.f081c06e.chunk.js": "/CardProject/static/js/44.f081c06e.chunk.js",
     "static/css/955.d3541f97.chunk.css": "/CardProject/static/css/955.d3541f97.chunk.css",
     "static/js/955.8b682153.chunk.js": "/CardProject/static/js/955.8b682153.chunk.js",
     "static/css/529.3b40b4e1.chunk.css": "/CardProject/static/css/529.3b40b4e1.chunk.css",
     "static/js/529.e08a1f85.chunk.js": "/CardProject/static/js/529.e08a1f85.chunk.js",
-    "static/css/689.38417272.chunk.css": "/CardProject/static/css/689.38417272.chunk.css",
-    "static/js/689.4ce15da7.chunk.js": "/CardProject/static/js/689.4ce15da7.chunk.js",
+    "static/css/689.a282e335.chunk.css": "/CardProject/static/css/689.a282e335.chunk.css",
+    "static/js/689.f7ca4c1e.chunk.js": "/CardProject/static/js/689.f7ca4c1e.chunk.js",
     "static/css/668.da200cd3.chunk.css": "/CardProject/static/css/668.da200cd3.chunk.css",
     "static/js/668.9f9ad720.chunk.js": "/CardProject/static/js/668.9f9ad720.chunk.js",
     "static/css/250.b114fc66.chunk.css": "/CardProject/static/css/250.b114fc66.chunk.css",
@@ -29,19 +29,19 @@
     "static/js/957.f4428c16.chunk.js": "/CardProject/static/js/957.f4428c16.chunk.js",
     "static/js/374.75aa4421.chunk.js": "/CardProject/static/js/374.75aa4421.chunk.js",
     "static/js/697.ad05cccb.chunk.js": "/CardProject/static/js/697.ad05cccb.chunk.js",
-    "static/js/535.73fe9fe3.chunk.js": "/CardProject/static/js/535.73fe9fe3.chunk.js",
+    "static/js/538.d1ac7de7.chunk.js": "/CardProject/static/js/538.d1ac7de7.chunk.js",
     "static/media/Photoaparat.png": "/CardProject/static/media/Photoaparat.5f172e08383e68a3ca91.png",
     "index.html": "/CardProject/index.html",
     "main.f2e8db5b.css.map": "/CardProject/static/css/main.f2e8db5b.css.map",
-    "main.b72c2693.js.map": "/CardProject/static/js/main.b72c2693.js.map",
+    "main.64bca7ef.js.map": "/CardProject/static/js/main.64bca7ef.js.map",
     "44.705e7ae3.chunk.css.map": "/CardProject/static/css/44.705e7ae3.chunk.css.map",
     "44.f081c06e.chunk.js.map": "/CardProject/static/js/44.f081c06e.chunk.js.map",
     "955.d3541f97.chunk.css.map": "/CardProject/static/css/955.d3541f97.chunk.css.map",
     "955.8b682153.chunk.js.map": "/CardProject/static/js/955.8b682153.chunk.js.map",
     "529.3b40b4e1.chunk.css.map": "/CardProject/static/css/529.3b40b4e1.chunk.css.map",
     "529.e08a1f85.chunk.js.map": "/CardProject/static/js/529.e08a1f85.chunk.js.map",
-    "689.38417272.chunk.css.map": "/CardProject/static/css/689.38417272.chunk.css.map",
-    "689.4ce15da7.chunk.js.map": "/CardProject/static/js/689.4ce15da7.chunk.js.map",
+    "689.a282e335.chunk.css.map": "/CardProject/static/css/689.a282e335.chunk.css.map",
+    "689.f7ca4c1e.chunk.js.map": "/CardProject/static/js/689.f7ca4c1e.chunk.js.map",
     "668.da200cd3.chunk.css.map": "/CardProject/static/css/668.da200cd3.chunk.css.map",
     "668.9f9ad720.chunk.js.map": "/CardProject/static/js/668.9f9ad720.chunk.js.map",
     "250.b114fc66.chunk.css.map": "/CardProject/static/css/250.b114fc66.chunk.css.map",
@@ -61,10 +61,10 @@
     "957.f4428c16.chunk.js.map": "/CardProject/static/js/957.f4428c16.chunk.js.map",
     "374.75aa4421.chunk.js.map": "/CardProject/static/js/374.75aa4421.chunk.js.map",
     "697.ad05cccb.chunk.js.map": "/CardProject/static/js/697.ad05cccb.chunk.js.map",
-    "535.73fe9fe3.chunk.js.map": "/CardProject/static/js/535.73fe9fe3.chunk.js.map"
+    "538.d1ac7de7.chunk.js.map": "/CardProject/static/js/538.d1ac7de7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2e8db5b.css",
-    "static/js/main.b72c2693.js"
+    "static/js/main.64bca7ef.js"
   ]
 }
