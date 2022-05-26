@@ -17,17 +17,20 @@ import {loggedAC} from "../Bll/auth-reducer";
 
 
 const PacksList = () => {
+
     let isLogged = useSelector<AppRootReducerType, boolean>((state) => state.auth.isLogged)
     let packs = useSelector<AppRootReducerType, cardPackType[]>((state) => state.packs.cardPacks)
     let circularProgress = useSelector<AppRootReducerType, boolean>((state) => state.packs.circularProgress)
-    let {
-        min,
-        max,
-        sortPacks,
-        user_id,
-        packName,
-        pageCount,
-    } = useSelector<AppRootReducerType, GetParamsType>((state) => state.packs.getParams)
+
+    //выбираем отдельно каждый элемент для исключения лишних перерисовок (при изменении отдельного параметра)
+    const selectGetParams = (state: AppRootReducerType) => state.packs.getParams
+    let {min} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+    let {max} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+    let {sortPacks} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+    let {user_id} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+    let {packName} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+    let {pageCount} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
+
 
     const dispatch: any = useDispatch()
 

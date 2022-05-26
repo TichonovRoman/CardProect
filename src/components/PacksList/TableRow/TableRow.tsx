@@ -25,8 +25,7 @@ type TableRowPropsType = {
 
 const TableRow = (props: TableRowPropsType) => {
 
-    const dispatch: any = useDispatch()
-    const navigate = useNavigate();
+     const navigate = useNavigate();
 
     let updateDate = props.updated.slice(0, 10)
     let createdDate = props.created.slice(0, 10)
@@ -39,7 +38,11 @@ const TableRow = (props: TableRowPropsType) => {
     const [deleteModalActive, setDeleteModalActive] = useState(false)
     const [editModalActive, setEditModalActive] = useState(false)
 
-    const onLearnModelClick = (id: string) => navigate(`/learnPack/${id}`);
+    const setEditModalActiveHandler =() => setEditModalActive(true)
+    const setDeleteModalActiveHandler = () => setDeleteModalActive(true)
+
+    const onLearnModelClick = () => navigate(`/learnPack/${props.id}`)
+
 
     return (
         <div className={rowStyle}>
@@ -64,12 +67,12 @@ const TableRow = (props: TableRowPropsType) => {
                 {
                     userId === props.userId
                         ? <div>
-                            <button className={m.deleteButton} onClick={() => setDeleteModalActive(true)}>Delete</button>
-                            <button className={m.editButton} onClick={() => setEditModalActive(true)}>Edit</button>
-                            {props.cards > 0 ? <button className={m.editButton} onClick={() => onLearnModelClick(props.id)}>Learn</button> : null}
+                            <button className={m.deleteButton} onClick={setDeleteModalActiveHandler}>Delete</button>
+                            <button className={m.editButton} onClick={setEditModalActiveHandler}>Edit</button>
+                            {props.cards > 0 ? <button className={m.editButton} onClick={onLearnModelClick}>Learn</button> : null}
 
                         </div>
-                        : props.cards > 0 ? <button className={m.editButton} onClick={() => onLearnModelClick(props.id)}>Learn</button> : "No cards"
+                        : props.cards > 0 ? <button className={m.editButton} onClick={onLearnModelClick}>Learn</button> : "No cards"
                 }
             </div>
         </div>
