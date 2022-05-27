@@ -1,6 +1,5 @@
-import axios, {AxiosResponse} from 'axios'
-import {AuthStateType} from "../Bll/auth-reducer";
-import {CardsType, initialPacksCardStateType} from "../PacksList/PackCard/packsCard-reducer";
+import axios from 'axios'
+import {CardsType, initialPacksCardStateType} from "../../redux/packsCard-reducer";
 
 export const instance = axios.create({
     baseURL: 'https://neko-back.herokuapp.com/2.0/',

@@ -1,7 +1,7 @@
 import {Dispatch} from "redux";
-import {addPackDataType, cardsAPI, getPacksDataType, myPackNameEditDataType,ResponseMeType} from "../api/cards-api";
+import {addPackDataType, cardsAPI, myPackNameEditDataType} from "../components/api/cards-api";
 import {ThunkAction} from "redux-thunk";
-import {AppRootReducerType} from "../Bll/store";
+import {AppRootReducerType} from "./store";
 
 //Types
 
@@ -108,72 +108,7 @@ const initialPacksState: PacksStateType = {
     isDisabledSearchButton: false,
     isDisabledAddNewPackButton: false,
 
-    cardPacks: [
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "1 колода",
-            cardsCount: 25,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee9",
-            name: "2 колода",
-            cardsCount: 36,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "3 колода",
-            cardsCount: 36,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee3",
-            name: "4 колода",
-            cardsCount: 150,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "5 колода",
-            cardsCount: 2,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "6 колода",
-            cardsCount: 3,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "7 колода",
-            cardsCount: 48,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-        {
-            _id: "5eb6cef840b7bf1cf0d8122d",
-            user_id: "5eb543f6bea3ad21480f1ee7",
-            name: "8 колода",
-            cardsCount: 89,
-            created: "2020-05-09T15:40:40.339Z",
-            updated: "2020-05-09T15:40:40.339Z",
-        },
-    ],
+    cardPacks: [],
     cardPacksTotalCount: 14,
     maxCardsCount: 4,
     minCardsCount: 0,

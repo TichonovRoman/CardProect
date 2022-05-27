@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./Modal.module.css"
-import {deletePackTC} from "../../../PacksList/packs-reducer";
+import {deletePackTC} from "../../../../redux/packs-reducer";
 import {useDispatch} from "react-redux";
 
 type DeleteModalPropsType = {

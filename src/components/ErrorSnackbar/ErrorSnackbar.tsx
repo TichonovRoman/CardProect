@@ -2,8 +2,8 @@ import React, { SyntheticEvent } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { useDispatch, useSelector } from 'react-redux';
-import { errorMessageAC } from '../Bll/auth-reducer'
-import { AppRootReducerType } from '../Bll/store';
+import { errorMessageAC } from '../../redux/auth-reducer'
+import { AppRootReducerType } from '../../redux/store';
 
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(

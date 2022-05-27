@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from "./EditNamePacksModal.module.css"
-import {deletePackTC, myPackNameEditTC} from "../../../PacksList/packs-reducer";
+import {myPackNameEditTC} from "../../../../redux/packs-reducer";
 import {useDispatch} from "react-redux";
 
 type EditNamePacksModalPropsType = {
@@ -16,8 +16,7 @@ const EditNamePacksModal = ({active, setActive, id, defaultName}: EditNamePacksM
 
     const [name, setName] = useState<string>(defaultName)
 
-    const closeModal = () => setActive(false)
-
+    const onClickCloseModal = () => setActive(false)
 
     const myPackNameEditTCHandler = () => {
         dispatch(myPackNameEditTC({
@@ -26,12 +25,12 @@ const EditNamePacksModal = ({active, setActive, id, defaultName}: EditNamePacksM
                 name: name
             }
         }))
-        closeModal()
+        onClickCloseModal()
     }
 
 
     return (
-        <div className={active ? `${styles.modalActive} ${styles.modal}` : `${styles.modal}`} onClick={closeModal}>
+        <div className={active ? `${styles.modalActive} ${styles.modal}` : `${styles.modal}`} onClick={onClickCloseModal}>
             <div className={active
                 ? `${styles.modalContent} ${styles.modalContentActive}`
                 : `${styles.modalContent}`}
@@ -50,7 +49,7 @@ const EditNamePacksModal = ({active, setActive, id, defaultName}: EditNamePacksM
                     onChange={(e) => setName(e.currentTarget.value)}/>
                 <div className={styles.modalButtonGroup}>
                     <button className={styles.modalSaveButton} onClick={myPackNameEditTCHandler}>Save</button>
-                    <button className={styles.modalCloseButton} onClick={closeModal}>Close</button>
+                    <button className={styles.modalCloseButton} onClick={onClickCloseModal}>Close</button>
                 </div>
 
 

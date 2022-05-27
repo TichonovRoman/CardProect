@@ -3,10 +3,10 @@ import c from './PackCard.module.css'
 import {useDispatch, useSelector} from "react-redux";
 import {CardsTask} from "./CardsTask/CardsTask";
 import {CardsBoard} from "./CardsBoard/CardsBoard";
-import {AppRootReducerType} from "../../Bll/store";
-import {CardsType, packsCardTC} from "./packsCard-reducer";
+import {AppRootReducerType} from "../../../redux/store";
+import {CardsType, packsCardTC} from "../../../redux/packsCard-reducer";
 import {Navigate, useParams} from "react-router-dom";
-import {loggedAC} from "../../Bll/auth-reducer";
+import {loggedAC} from "../../../redux/auth-reducer";
 import {CardsPagination} from "./CardsPagination/CardsPagination";
 import {Grid} from "@mui/material";
 import {AddCard} from "./AddCard/AddCard";

@@ -1,13 +1,12 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
-// import s from "../../generalStyle/GeneralStyle.module.css"
 import m from "./Profile.module.css"
 import photoaparate from "../../img/Photoaparat.png"
 import {Button, FormControl, FormHelperText, Input, InputLabel} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {loggedAC, LogoutTC} from "../Bll/auth-reducer";
-import {AppRootReducerType} from "../Bll/store";
-import {editNameTC, loginTC, setUserAC} from "../Login/login-reducer";
-import {authAPI, cardsAPI} from "../api/cards-api";
+import {loggedAC, LogoutTC} from "../../redux/auth-reducer";
+import {AppRootReducerType} from "../../redux/store";
+import {editNameTC, setUserAC} from "../../redux/login-reducer";
+import {authAPI} from "../api/cards-api";
 import {Navigate, useParams} from "react-router-dom";
 
 
@@ -33,7 +32,6 @@ const Profile = () => {
     useEffect(() => {
         //показать крутилку
 
-
         authAPI.me()
             .then((res) => {
                 dispatch(setUserAC(res.data))
@@ -41,13 +39,12 @@ const Profile = () => {
                 setName(res.data.name)
             })
             .catch(() => {
-
                 return <Navigate to={`/login`}/>
             })
             .finally(() => {
                 //убрать крутилку
             })
-    }, [])
+    }, [dispatch])
 
     if (!isLogged) {
         return <Navigate to={`/login`}/>

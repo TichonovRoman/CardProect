@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import m from "./AddPackBlock.module.css";
 import {Button, Paper} from "@mui/material";
 import {useDispatch} from "react-redux";
-import {addNewPackTC, editSearchNameAC, getPacksTC} from "../packs-reducer";
+import {addNewPackTC, editSearchNameAC, getPacksTC} from "../../../redux/packs-reducer";
 import AddNewPackModal from "../../common/Modal/AddNewPackModal/AddNewPackModal";
 
 const AddPackBlock = () => {

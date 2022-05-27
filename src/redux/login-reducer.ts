@@ -1,14 +1,13 @@
-import {Simulate} from "react-dom/test-utils";
 import {Dispatch} from "redux";
-import {authAPI, cardsAPI, LoginParamsType} from "../api/cards-api";
+import {authAPI, cardsAPI, LoginParamsType} from "../components/api/cards-api";
 import {ThunkAction} from "redux-thunk";
-import {AppRootReducerType} from "../Bll/store";
+import {AppRootReducerType} from "./store";
 import {
     changeStatusSaveButtonAC,
     changeStatusSaveButtonActionType,
     ErrorActionType,
     errorMessageAC, loggedAC, LoggedActionType
-} from "../Bll/auth-reducer";
+} from "./auth-reducer";
 
 const initialState: AuthStateType = {
     _id: "",
@@ -42,7 +41,6 @@ export type AuthStateType = {
 
     // isLogged: boolean;
 }
-// type InitialStateType = UserType
 
 export const LoginReducer = (state: AuthStateType = initialState, action: ActionsType) => {
     switch (action.type) {
@@ -97,14 +95,12 @@ type ThunkType = ThunkAction<void, AppRootReducerType, unknown, ActionsType>
 
 
 export const loginTC = (data: LoginParamsType) => (dispatch: Dispatch<ActionsType>) => {
-    //krutilka
     authAPI.login(data)
         .then(res => {
             // dispatch(setIsLoggedInAC(true))
             dispatch(userLoginAC(res.data))
             dispatch(loggedAC(true))
-            //wikluchaem krutilku
-        })
+           })
         .catch(err => {
             if (err.response.data.passwordRegExp) {
                 dispatch(errorMessageAC(err.response.data.passwordRegExp))

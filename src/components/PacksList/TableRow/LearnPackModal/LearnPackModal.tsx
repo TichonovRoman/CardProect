@@ -2,9 +2,9 @@ import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import { AppRootReducerType } from '../../../Bll/store';
-import { CardsType, getCards, gradeCards } from '../../PackCard/packsCard-reducer';
-import { cardPackType } from '../../packs-reducer';
+import { AppRootReducerType } from '../../../../redux/store';
+import { CardsType, getCards, gradeCards } from '../../../../redux/packsCard-reducer';
+import { cardPackType } from '../../../../redux/packs-reducer';
 import s from "./LearnPackModal.module.css";
 
 
@@ -53,7 +53,7 @@ const LearnPackModal = () => {
             dispatch(getCards(cardId));
             if (cards.length > 0) setCard(getCard(cards))
         }
-    }, [])
+    }, [cardId, dispatch, cards])
 
 
     const closeModalClick = () => navigate(-1);

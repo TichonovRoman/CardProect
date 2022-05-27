@@ -5,7 +5,7 @@ import styles from './ForgotPassword.module.css'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Grid } from '@mui/material';
-import { forgot } from '../../Bll/auth-reducer';
+import { forgot } from '../../../redux/auth-reducer';
 
 export const emailRegExp = /^[\w][\w-.]*@[\w-]+\.[a-z]{2,7}$/i;
 

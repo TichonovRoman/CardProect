@@ -4,10 +4,10 @@ import * as yup from 'yup'
 import styles from './Registration.module.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useDispatch, useSelector } from 'react-redux';
-import { register } from '../Bll/auth-reducer';
+import { register } from '../../redux/auth-reducer';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { Grid } from '@mui/material';
-import { AppRootReducerType } from '../Bll/store';
+import { AppRootReducerType } from '../../redux/store';
 
 const Registration = () => {
 

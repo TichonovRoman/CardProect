@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import m from "./TableTitle.module.css";
-import {filterTableAC, filterTableValue} from "../packs-reducer";
+import {filterTableAC, filterTableValue} from "../../../redux/packs-reducer";
 import {useDispatch} from "react-redux";
 
 const TableTitle = React.memo (() => {

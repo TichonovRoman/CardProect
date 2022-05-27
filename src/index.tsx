@@ -4,8 +4,8 @@ import './index.css';
 import App from './components/Main/App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
-import {BrowserRouter, HashRouter} from "react-router-dom";
-import {store} from "./components/Bll/store";
+import {HashRouter} from "react-router-dom";
+import {store} from "./redux/store";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

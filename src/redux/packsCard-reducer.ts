@@ -1,9 +1,7 @@
-import React from 'react';
 import {Dispatch} from "redux";
-import {cardsAPI, cardsPackResponseType, instance} from "../../api/cards-api";
-import {AppRootReducerType} from "../../Bll/store";
+import {cardsAPI} from "../components/api/cards-api";
+import {AppRootReducerType} from "./store";
 import {ThunkAction} from "redux-thunk";
-import {currentPageChangeACType} from "../packs-reducer";
 
 export type CardsType = {
     answer: string

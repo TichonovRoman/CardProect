@@ -2,9 +2,9 @@ import {applyMiddleware, combineReducers} from "redux";
 import thunkMiddleware from 'redux-thunk'
 import {legacy_createStore as createStore} from 'redux'
 import {authReducer} from "./auth-reducer";
-import {LoginReducer} from "../Login/login-reducer";
-import {packsReducer} from "../PacksList/packs-reducer";
-import {packsCardReducer} from "../PacksList/PackCard/packsCard-reducer";
+import {LoginReducer} from "./login-reducer";
+import {packsReducer} from "./packs-reducer";
+import {packsCardReducer} from "./packsCard-reducer";
 
 
 const rootReducer = combineReducers({

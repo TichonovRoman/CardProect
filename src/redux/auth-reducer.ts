@@ -1,6 +1,5 @@
-import { authAPI } from './../api/cards-api';
+import { authAPI } from '../components/api/cards-api';
 import { Dispatch } from "redux";
-import { cardsAPI, ResponseMeType } from "../api/cards-api";
 import { ThunkAction } from "redux-thunk";
 import { AppRootReducerType } from "./store";
 import { NavigateFunction } from "react-router-dom";

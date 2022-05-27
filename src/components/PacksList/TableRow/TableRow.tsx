@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import m from "./TableRow.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { AppRootReducerType } from "../../Bll/store";
+import { useSelector } from "react-redux";
+import { AppRootReducerType } from "../../../redux/store";
 import { NavLink, useNavigate } from "react-router-dom";
-import { addNewPackTC, deletePackTC, myPackNameEditTC } from "../packs-reducer";
 import DeleteModal from "../../common/Modal/DeleteModal/DeleteModal";
 import EditNamePacksModal from "../../common/Modal/EditModal/EditNamePacksModal";
 
@@ -32,7 +31,7 @@ const TableRow = (props: TableRowPropsType) => {
 
     let userId = useSelector<AppRootReducerType, string>((state) => state.login._id)
 
-    let rowStyle = props.index % 2 != 0 ? `${m.tableRow}` : `${m.tableRow} + ${m.tableRowStyle}`
+    let rowStyle = props.index % 2 !== 0 ? `${m.tableRow}` : `${m.tableRow} + ${m.tableRowStyle}`
 
 
     const [deleteModalActive, setDeleteModalActive] = useState(false)

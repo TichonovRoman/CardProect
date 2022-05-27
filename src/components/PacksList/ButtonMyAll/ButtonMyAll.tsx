@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import m from "../ButtonMyAll/ButtonMyAll.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {cardPackType, getPacksTC, showMyAllPacksAC} from "../packs-reducer";
-import {AppRootReducerType} from "../../Bll/store";
+import {showMyAllPacksAC} from "../../../redux/packs-reducer";
+import {AppRootReducerType} from "../../../redux/store";
 
 const ButtonMyAll = () => {
 

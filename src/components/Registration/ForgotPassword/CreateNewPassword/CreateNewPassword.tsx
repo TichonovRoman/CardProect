@@ -3,10 +3,10 @@ import { Formik } from 'formik'
 import * as yup from 'yup'
 import styles from './CreateNewPassword.module.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Grid } from '@mui/material';
-import { setNewPassword } from '../../../Bll/auth-reducer';
+import { setNewPassword } from '../../../../redux/auth-reducer';
 
 
 const CreateNewPassword = () => {

@@ -1,8 +1,8 @@
 import React, {ChangeEvent, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import s from "./CardsPagination.module.css"
-import {AppRootReducerType} from "../../../Bll/store";
-import {currentCardPageChangeAC} from "../packsCard-reducer";
+import {AppRootReducerType} from "../../../../redux/store";
+import {currentCardPageChangeAC} from "../../../../redux/packsCard-reducer";
 
 type CardsPaginationPropsType = {
     id: any

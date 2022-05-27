@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from "./AddNewPackModal.module.css"
-import {addNewPackTC} from "../../../PacksList/packs-reducer";
+import {addNewPackTC} from "../../../../redux/packs-reducer";
 import {useDispatch} from "react-redux";
 
 

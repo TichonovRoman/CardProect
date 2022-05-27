@@ -2,7 +2,7 @@ import { Grid } from '@mui/material'
 import React from 'react'
 import styles from './CheckEmail.module.css'
 import { useSelector } from 'react-redux';
-import { AppRootReducerType } from '../../../Bll/store';
+import { AppRootReducerType } from '../../../../redux/store';
 import { CheckEmailIcons } from './CheckEmailIcons';
 
 function CheckEmail() {

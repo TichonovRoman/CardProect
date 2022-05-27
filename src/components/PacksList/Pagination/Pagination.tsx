@@ -1,26 +1,17 @@
-import React, {ChangeEvent, ChangeEventHandler, useEffect, useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import m from "./Pagination.module.css";
 import {useDispatch, useSelector} from "react-redux";
-import {AppRootReducerType} from "../../Bll/store";
-import {cardPackType, currentPageChangeAC, getPacksTC, sizePageChangeAC} from "../packs-reducer";
-import {number} from "yup";
-//
-// export type PaginationPropsType = {
-//     pageNumber: number
-// }
+import {AppRootReducerType} from "../../../redux/store";
+import {currentPageChangeAC, getPacksTC, sizePageChangeAC} from "../../../redux/packs-reducer";
+
 
 const Pagination = () => {
+
+    const dispatch: any = useDispatch()
 
     let cardPacksTotalCount = useSelector<AppRootReducerType, number>((state) => state.packs.cardPacksTotalCount)
     let pageSize = useSelector<AppRootReducerType, number>((state) => state.packs.pageCount)
     let pageNumber = useSelector<AppRootReducerType, number>((state) => state.packs.getParams.page)
-
-
-    // useEffect(()=> {
-    //     dispatch(getPacksTC())
-    // }, [pageNumber])
-
-    const dispatch: any = useDispatch()
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
         dispatch(sizePageChangeAC(Number(e.currentTarget.value)))

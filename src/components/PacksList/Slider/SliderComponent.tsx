@@ -2,8 +2,8 @@ import React from 'react';
 import Slider from '@mui/material/Slider';
 import {Box, Button} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {AppRootReducerType} from "../../Bll/store";
-import {editNumberOfCardsAC} from "../packs-reducer";
+import {AppRootReducerType} from "../../../redux/store";
+import {editNumberOfCardsAC} from "../../../redux/packs-reducer";
 
 const SliderComponent = () => {
 
