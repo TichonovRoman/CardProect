@@ -16,6 +16,9 @@ import {authAPI} from "../api/cards-api";
 import {loggedAC} from "../Bll/auth-reducer";
 
 
+
+const selectGetParams = (state: AppRootReducerType) => state.packs.getParams
+
 const PacksList = () => {
 
     let isLogged = useSelector<AppRootReducerType, boolean>((state) => state.auth.isLogged)
@@ -23,7 +26,7 @@ const PacksList = () => {
     let circularProgress = useSelector<AppRootReducerType, boolean>((state) => state.packs.circularProgress)
 
     //выбираем отдельно каждый элемент для исключения лишних перерисовок (при изменении отдельного параметра)
-    const selectGetParams = (state: AppRootReducerType) => state.packs.getParams
+
     let {min} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
     let {max} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)
     let {sortPacks} = useSelector<AppRootReducerType, GetParamsType>(selectGetParams)

@@ -26,13 +26,7 @@ const LearnPackModal = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch<any>();
     const { cardId } = useParams();
-    
-    const [gradeValue, setGradeValue] = React.useState<number>();
-    const [showAnswer, setShowAnswer] = useState<boolean>(false);
-    let packs = useSelector<AppRootReducerType, cardPackType[]>((state) => state.packs.cardPacks)
-    let cards = useSelector<AppRootReducerType, CardsType[]>((state) => state.cards.cards)
-
-    const [card, setCard] = useState<CardsType>({
+    const initialState = {
         _id: '',
         cardsPack_id: '',
 
@@ -44,8 +38,14 @@ const LearnPackModal = () => {
         created: '',
         updated: '',
         user_id: ''
+    }
 
-    });
+    const [gradeValue, setGradeValue] = React.useState<number>();
+    const [showAnswer, setShowAnswer] = useState<boolean>(false);
+    const [card, setCard] = useState<CardsType>(initialState);
+
+    let packs = useSelector<AppRootReducerType, cardPackType[]>((state) => state.packs.cardPacks)
+    let cards = useSelector<AppRootReducerType, CardsType[]>((state) => state.cards.cards)
 
 
     useEffect(() => {
